@@ -1,1 +1,127 @@
-My first homework
+Задание 1
+
+long_phrase = 'Насколько проще было бы писать программы, если бы не заказчики'
+short_phrase = '640Кб должно хватить для любых задач. Билл Гейтс (по легенде)'
+
+if len (long_phrase) > len (short_phrase):
+    print ('True')
+else: 
+    print ('False')
+
+Задание 2
+
+user_input = int(input ('Введите значение в байтах '))
+a = user_input / 2**20
+print ('Объем файла равен ', a,'Mb')
+
+Задание 3 / Вариант 1
+
+user_input_month = input('Введите месяц: ')
+user_input_date = int(input ('Введите число: '))
+
+if user_input_month == ('январь'): 
+    if 1 <= user_input_date <= 20 :
+        print ('Козерог')
+    elif 21 <= user_input_date <= 31:
+        print ('Водолей')
+elif user_input_month == ('февраль'): 
+    if 1 <= user_input_date <= 20:
+        print ('Водолей')
+    elif 21 <= user_input_date <= 29:
+        print ('Рыбы')
+elif user_input_month == ('март'):
+    if 1 <= user_input_date <= 20:
+        print ('Рыбы')
+    elif 21 <= user_input_date <= 31:
+        print ('Овен')
+elif user_input_month == ('апрель'):
+    if 1 <= user_input_date <= 20:
+        print ('Овен')
+    elif 21 <= user_input_date <= 30:
+        print ('Телец')
+elif user_input_month == ('май'):
+    if 1 <= user_input_date <= 20:
+        print ('Телец')
+    elif 21 <= user_input_date <= 31:
+        print ('Близнецы')
+elif user_input_month == ('июнь'):
+    if 1 <= user_input_date <= 21:
+        print ('Близнецы')
+    elif 22 <= user_input_date <= 30:
+        print ('Рак')
+elif user_input_month == ('июль'):
+    if 1 <= user_input_date <= 22:
+        print ('Рак')
+    elif 23 <= user_input_date <= 31:
+        print ('Лев')
+elif user_input_month == ('август'):
+    if 1 <= user_input_date <= 23:
+        print ('Лев')
+    elif 24 <= user_input_date <= 31:
+        print ('Дева')
+elif user_input_month == ('сентябрь'):
+    if 1 <= user_input_date <= 23:
+        print ('Дева')
+    elif 24 <= user_input_date <= 30:
+        print ('Весы')
+elif user_input_month == ('октябрь'):
+    if 1 <= user_input_date <= 23:
+        print ('Весы')
+    elif 24 <= user_input_date <= 31:
+        print ('Скорпион')
+elif user_input_month == ('ноябрь'):
+    if 1 <= user_input_date <= 22:
+        print ('Скорпион')
+    elif 23 <= user_input_date <= 30:
+        print ('Стрелец')
+else:
+    if user_input_month == ('декабрь'):
+        if 1 <= user_input_date <= 21:
+            print ('Стрелец')
+        elif 22 <= user_input_date <= 31:
+            print ('Козерог')
+
+
+Задание 3 / Вариант 2
+
+user_input_month = input('Введите месяц: ')
+user_input_date = int(input ('Введите число: '))
+
+if user_input_date >= 32 or user_input_date <= 0:
+    print ('Неверная дата')
+elif user_input_month == ('декабрь') and user_input_date >= 22 or user_input_month == ('январь') and user_input_date <= 20:
+    print ('Козерог')
+elif user_input_month == ('январь') and user_input_date >= 21 or user_input_month == ('февраль') and user_input_date <= 20:
+    print ('Водолей')
+elif user_input_month == ('февраль') and user_input_date >= 21 or user_input_month == ('март') and user_input_date <= 21:
+    print ('Рыбы')
+elif user_input_month == ('март') and user_input_date >= 21 or user_input_month == ('апрель') and user_input_date <= 20:
+     print ('Овен')
+elif user_input_month == ('апрель') and user_input_date >= 21 or user_input_month == ('май') and user_input_date <= 20:
+     print ('Телец')
+elif user_input_month == ('май') and user_input_date >= 21 or user_input_month == ('июнь') and user_input_date <= 21:
+     print ('Близнецы')
+elif user_input_month == ('июнь') and user_input_date >= 22 or user_input_month == ('июль') and user_input_date <= 22:
+     print ('Рак')
+elif user_input_month == ('июль') and user_input_date >= 23 or user_input_month == ('август') and user_input_date <= 23:
+     print ('Лев')
+elif user_input_month == ('август') and user_input_date >= 24 or user_input_month == ('сентябрь') and user_input_date <= 23:
+     print ('Дева')
+elif user_input_month == ('сентябрь') and user_input_date >= 24 or user_input_month == ('октябрь') and user_input_date <= 23:
+     print ('Весы')
+elif user_input_month == ('октябрь') and user_input_date >= 24 or user_input_month == ('октябрь') and user_input_date <= 22:
+     print ('Скорпион')
+else:
+    if user_input_month == ('ноябрь') and user_input_date >= 23 or user_input_month == ('декабрь') and user_input_date <= 21:
+        print ('Скорпион')
+
+Задание 4
+
+m_salary = int (input ('Введите заработанную плату в месяц: '))
+y_salary = m_salary * 12
+y_mortgage = int (input ('Введите сколько процентов уходит на ипотеку: ')) / 100 * m_salary * 12
+y_life = int (input ('Введите сколько процентов уходит на жизнь: ')) / 100 * y_salary
+y_bonus = int (input ('Введите количество премий за год: ')) * m_salary / 2
+y_savings = y_bonus + (y_salary - y_mortgage - y_life)
+
+print ('На ипотеку было потрачено: ', y_mortgage, 'рублей Было накоплено: ', y_savings, 'рублей')
